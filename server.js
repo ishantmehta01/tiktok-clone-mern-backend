@@ -10,8 +10,8 @@ const port = process.env.PORT || 9000;
 //middlewares
 app.use(express.json());
 app.use((req, res, next) => {
-  res.send("Access-Control-Allow-Origin", "*"),
-    res.send("Access-Control-Allow-Headers", "*"),
+  res.setHeader("Access-Control-Allow-Origin", "*"),
+    res.setHeader("Access-Control-Allow-Headers", "*"),
     next();
 });
 
